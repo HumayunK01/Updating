@@ -6,53 +6,46 @@
 
 @layer base {
   :root {
-    /* Web3 Dark Theme - Futuristic cyber aesthetic */
-    --background: 240 10% 4%;
-    --foreground: 0 0% 98%;
+    /* Base colors - Clean professional palette */
+    --background: 250 100% 99%;
+    --foreground: 224 15% 15%;
 
-    /* Glass morphism cards */
-    --card: 240 10% 8%;
-    --card-foreground: 0 0% 95%;
+    /* Card styling */
+    --card: 0 0% 100%;
+    --card-foreground: 224 15% 15%;
 
     /* Popover styling */
-    --popover: 240 10% 6%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 15% 15%;
 
-    /* Primary - Neon cyan */
-    --primary: 180 100% 50%;
-    --primary-foreground: 240 10% 4%;
+    /* Primary - Professional blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Purple gradient */
-    --secondary: 270 100% 15%;
-    --secondary-foreground: 0 0% 95%;
+    /* Secondary - Subtle gray */
+    --secondary: 220 13% 96%;
+    --secondary-foreground: 224 15% 25%;
 
     /* Muted elements */
-    --muted: 240 10% 12%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 220 13% 96%;
+    --muted-foreground: 220 9% 46%;
 
-    /* Accent - Hot pink neon */
-    --accent: 320 100% 60%;
-    --accent-foreground: 240 10% 4%;
+    /* Accent - Warning amber for archive banner */
+    --accent: 43 96% 56%;
+    --accent-foreground: 26 83% 14%;
 
-    /* Warning colors - Electric orange */
-    --warning: 25 100% 55%;
-    --warning-foreground: 240 10% 4%;
+    /* Warning colors for archival banner */
+    --warning: 38 92% 50%;
+    --warning-foreground: 48 96% 89%;
 
-    /* Destructive - Red neon */
-    --destructive: 0 100% 60%;
+    /* Destructive */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    /* Borders and inputs with glow */
-    --border: 240 20% 20%;
-    --input: 240 10% 12%;
-    --ring: 180 100% 50%;
-
-    /* Web3 specific colors */
-    --neon-purple: 270 100% 70%;
-    --neon-cyan: 180 100% 50%;
-    --neon-pink: 320 100% 60%;
-    --glass-bg: 240 10% 8%;
-    --glass-border: 240 20% 20%;
+    /* Borders and inputs */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
 
     --radius: 0.5rem;
 
@@ -122,7 +115,7 @@
   }
 }
 
-/* Web3 Aesthetic Animations and Effects */
+/* Custom animations for archival page */
 @layer utilities {
   .animate-fade-in {
     animation: fadeIn 0.8s ease-out forwards;
@@ -138,18 +131,6 @@
     opacity: 0;
   }
   
-  .animate-glow {
-    animation: glow 2s ease-in-out infinite alternate;
-  }
-  
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-  
-  .animate-gradient {
-    animation: gradientShift 3s ease infinite;
-  }
-  
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -161,102 +142,7 @@
     }
   }
   
-  @keyframes glow {
-    from {
-      box-shadow: 0 0 20px hsl(var(--primary) / 0.4);
-    }
-    to {
-      box-shadow: 0 0 30px hsl(var(--primary) / 0.8), 0 0 40px hsl(var(--accent) / 0.3);
-    }
-  }
-  
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-  
-  @keyframes gradientShift {
-    0%, 100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-  }
-  
-  /* Web3 Backgrounds */
-  .cyber-bg {
-    background: 
-      radial-gradient(circle at 20% 80%, hsl(var(--neon-purple) / 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(var(--neon-cyan) / 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, hsl(var(--neon-pink) / 0.1) 0%, transparent 50%),
-      linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--secondary)) 100%);
-    background-size: 400% 400%;
-  }
-  
-  /* Glassmorphism Effects */
-  .glass-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 
-      0 8px 32px rgba(0, 0, 0, 0.3),
-      inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  }
-  
-  .glass-card:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid hsl(var(--primary) / 0.3);
-    box-shadow: 
-      0 8px 40px rgba(0, 0, 0, 0.4),
-      0 0 20px hsl(var(--primary) / 0.2),
-      inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  }
-  
-  /* Neon Text Effects */
-  .neon-text {
-    background: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--accent)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: 0 0 10px hsl(var(--primary) / 0.5);
-  }
-  
-  .cyber-border {
-    border: 2px solid transparent;
-    background: linear-gradient(hsl(var(--background)), hsl(var(--background))) padding-box,
-                linear-gradient(45deg, hsl(var(--primary)), hsl(var(--accent))) border-box;
-  }
-  
-  /* Particle Effects */
-  .particles::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-      radial-gradient(2px 2px at 20px 30px, hsl(var(--primary) / 0.5), transparent),
-      radial-gradient(2px 2px at 40px 70px, hsl(var(--accent) / 0.4), transparent),
-      radial-gradient(1px 1px at 90px 40px, hsl(var(--neon-purple) / 0.6), transparent),
-      radial-gradient(1px 1px at 130px 80px, hsl(var(--neon-cyan) / 0.4), transparent);
-    background-repeat: repeat;
-    background-size: 200px 100px;
-    animation: particleMove 20s linear infinite;
-    pointer-events: none;
-  }
-  
-  @keyframes particleMove {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-100px);
-    }
+  .gradient-bg {
+    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--secondary)) 100%);
   }
 }
