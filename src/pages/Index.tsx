@@ -73,9 +73,9 @@ const Index = () => {
           {/* Right Column */}
           <div className="space-y-6">
             {/* Section 2: What's Next */}
-            <div className="bg-card rounded-xl p-6 modern-shadow border border-border hover:glow-effect transition-all duration-300 group">
+            <div className="bg-card rounded-xl p-6 modern-shadow border border-border">
               <div className="flex items-start gap-4">
-                <div className="bg-primary/10 p-2.5 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-primary/10 p-2.5 rounded-lg">
                   <RefreshCw className="h-5 w-5 text-primary" />
                 </div>
                 <div className="flex-1">
@@ -92,7 +92,7 @@ const Index = () => {
             </div>
 
             {/* Call to Action */}
-            <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-xl p-6 border border-primary/20 modern-shadow hover:scale-105 transition-all duration-300">
+            <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-xl p-6 border border-primary/20 modern-shadow ">
               <div className="text-center">
                 <div className="bg-primary/10 p-3 rounded-lg w-fit mx-auto mb-4">
                   <Users className="h-6 w-6 text-primary" />
@@ -107,6 +107,7 @@ const Index = () => {
                 <Button 
                   size="lg" 
                   className="text-sm px-6 py-2.5 rounded-lg hover:scale-105 transition-all duration-300"
+                  onClick={() => window.open('https://github.com/HumayunK01', '_blank')}
                 >
                   Follow for Updates
                 </Button>
@@ -120,7 +121,7 @@ const Index = () => {
           <div className="max-w-md mx-auto">
             <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent mb-6"></div>
             <p className="text-muted-foreground italic text-base font-light tracking-wide">
-              – Humayun
+              ~ Humayun
             </p>
           </div>
         </div>
